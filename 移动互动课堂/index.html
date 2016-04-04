@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<div>
+<!--<div class="container-fluid">-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a href="#vote" aria-controls="vote" role="tab" data-toggle="tab">
+            <!--<button type="button" class="btn btn-default" >-->
+                <span class="glyphicon glyphicon-stats" aria-hidden="false"></span>
+            <!--</button>-->
+            投票</a></li>
+        <li role="presentation" class="active" ><a href="#signin" aria-controls="signin" role="tab" data-toggle="tab">
+            <span class="glyphicon glyphicon-sunglasses" aria-hidden="false"></span>
+            签到</a></li>
+        <li role="presentation" ><a href="#homework" aria-controls="homework" role="tab" data-toggle="tab">
+            <span class="glyphicon glyphicon-edit" aria-hidden="false"></span>
+            作业</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="vote">
+            <div class="panel-group" id="voteAccordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="voteOne">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#voteAccordion" href="#collapseVoteOne" aria-expanded="false" aria-controls="collapseOne">
+                                投票1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseVoteOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <!-- 单选页面-->
+                            <p>这个页面做得咋样</p>
+                            <input type="radio" name="radio" value="good">艾玛太好看了
+                            </br>
+                            <input type="radio" name="radio" value="low">天哪好low
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="voteTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#voteAccordion" href="#collapseVoteTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                投票2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseVoteTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <!-- 多选页面-->
+                            <p>这个页面做得咋样</p>
+                            <input type="checkbox" name="checkbox" value="good">艾玛太好看了
+                            </br>
+                            <input type="checkbox" name="checkbox" value="low">天哪好low
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="voteThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#voteAccordion" href="#collapseVoteThree" aria-expanded="false" aria-controls="collapseThree">
+                                投票3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseVoteThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <!-- 已投票页面显示结果-->
+                            <p>这个页面做得咋样</p>
+                            <p>艾玛太好看了</p>100%
+                            <p>天哪好low</p>0%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                发布投票
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">发布投票</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-offset-1 col-sm-9">
+                                        <textarea class="form-control" rows="3" placeholder="请输入投票主题"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-1 col-sm-7">
+                                        <input type="choice" class="form-control" id="choice1" placeholder="选项1">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-1 col-sm-7">
+                                        <input type="choice" class="form-control" id="choice2" placeholder="选项2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-1 col-sm-10">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                单选
+                                            </label>
+                                            <label class="col-sm-offset-2">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                多选
+                                            </label>
+                                            <label class="col-sm-offset-6">
+                                                <input type="checkbox">匿名投票
+                                            </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selectTime" class="col-sm-3 control-label">有限时间</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" id="selectTime">
+                                            <option>2小时</option>
+                                            <option>24小时</option>
+                                            <option>3天</option>
+                                            <option>7天</option>
+                                            <option>3个月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                            <button type="button" data-toggle="modal" data-target="#myModal">发布</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+        <div role="tabpanel" class="tab-pane " id="signin"></div>
+
+        <div role="tabpanel" class="tab-pane" id="homework">
+            <div class="panel-group" id="homeworkAccordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="workOne">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#homeworkAccordion" href="#collapseWorkOne" aria-expanded="false" aria-controls="collapseOne">
+                                第一次作业
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWorkOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">下载链接1</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="workTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#homeworkAccordion" href="#collapseWorkTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                第二次作业
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWorkTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">下载链接2</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="workThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#homeworkAccordion" href="#collapseWorkThree" aria-expanded="false" aria-controls="collapseThree">
+                                第三次作业
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWorkThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">下载链接3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">提交作业</label>
+                <input type="file" id="exampleInputFile">
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
